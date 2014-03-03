@@ -8,7 +8,7 @@ EmberApp.DocumentsRoute = Ember.Route.extend({
         	// random data
         	creationDate = randomDate();
 			this.document.push({
-				"name" : "test document "+i,
+				"name" : "test document " + i,
 				"persons" : (Math.random() > .33 && "Kees Vonk" || Math.random() > .33 && "Klasien van Diepen" || "Bep de Denker"),
 				"types" : "test document",
 				"instances" : ["Sem"],

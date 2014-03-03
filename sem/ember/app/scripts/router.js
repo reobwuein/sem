@@ -10,4 +10,7 @@ Ember.Router.map(function () {
   this.resource('document' , {path:'documents/:id'})
   this.resource('document', {path:'documents/new'});
 
+  this.resource('login');
+ 
+
 });

@@ -8,7 +8,6 @@ EmberApp.DocumentRoute = Ember.Route.extend({
 	},
 
     model: function () {
-
         this.fields = [
         	{
         		"setTextInput":true,
@@ -23,7 +22,7 @@ EmberApp.DocumentRoute = Ember.Route.extend({
         		"uniqueName":"form12-field2",
         		"name":"veld 2",
         		"fieldValue":"hoi 2"
-        	},
+        	}, 
         	{
         		"setHeader3":true,
         		"fieldValue":"Kopje"
