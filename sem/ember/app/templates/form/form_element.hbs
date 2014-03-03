@@ -1,0 +1,43 @@
+{{!input field with or without label}}
+{{#if setTextInput}}
+	{{#if setLabel}}
+		<label {{bind-attr for="uniqueName"}}>{{name}}
+			{{input type="text" value=fieldValue disabled=reading name=uniqueName}}
+		</label>
+	{{else}}
+		{{input type="text" value=fieldValue disabled=reading name=uniqueName}}
+	{{/if}}
+{{/if}}
+
+{{!text area with or without label}}
+{{#if setTextArea}}
+	{{#if setLabel}}
+		<label {{bind-attr for="uniqueName"}}>{{name}}
+			{{textarea value=fieldValue disabled=reading name=uniqueName}}
+		</label>
+	{{else}}
+		{{textarea value=fieldValue disabled=reading name=uniqueName}}
+	{{/if}}
+{{/if}}
+
+{{!headers}}
+{{#if setHeader1}}
+	<h1>{{fieldValue}}</h1>
+{{/if}}
+{{#if setHeader2}}
+	<h2>{{fieldValue}}</h2>
+{{/if}}
+{{#if setHeader3}}
+	<h3>{{fieldValue}}</h3>
+{{/if}}
+{{#if setHeader4}}
+	<h4>{{fieldValue}}</h4>
+{{/if}}
+{{#if setHeader5}}
+	<h5>{{fieldValue}}</h5>
+{{/if}}
+
+{{!image}}
+{{#if setImage}}
+	<img {{bind-attr src="fieldValue"}} {{bind-attr alt="name"}}>
+{{/if}}

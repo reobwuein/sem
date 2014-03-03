@@ -1,0 +1,18 @@
+		
+			<!-- div class="nav clients"><a href="./index.html">Home</a> > Clients</div //-->
+			<div class="content">
+
+				<div class="sheet document">
+					<h1>Clienten</h1>
+					<div class="filters"></div>
+					<ul class="list">
+						{{#each clients}}
+						<li>
+							<a href="./client.html" class="client">
+								<span class="person">{{name}}</span>
+							</a>
+						</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>

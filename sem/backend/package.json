@@ -1,0 +1,29 @@
+{
+  "name": "sem-backend",
+  "version": "0.0.1",
+  "description": "API type backend for Sem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reobwuein/sem.git"
+  },
+  "keywords": [
+    "sem"
+  ],
+  "author": "Robin",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/reobwuein/sem/issues"
+  },
+  "devDependencies": {
+  },
+  "dependencies": {
+    "q": "~0.9.7",
+    "express": "~3.4.4",
+    "node-oauth2-server": "~1.5.2",
+    "mysql": "~2.0.0-alpha9"
+  }
+}

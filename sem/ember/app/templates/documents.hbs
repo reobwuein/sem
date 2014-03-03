@@ -1,0 +1,37 @@
+			
+			<!-- div class="nav documents"><a href="./index.html">Home</a> > Documents</div //-->
+			<div class="content">
+
+				<div class="state-nav">
+					<a href="javascript:void(0)" class="new button">new</a>
+					<a href="javascript:void(0)" class="to-top button">edit</a>
+					<a href="javascript:void(0)" class="back-to-menu button">menu</a>
+				</div>
+
+				<div class="sheet document">
+					<h1>Documenten</h1>
+					<div class="filters">
+						<div class="search"><input type="text" value="" placeholder="Zoek" name="search" /></div>
+						<div class="order">
+							<a href="javascript:void(0)" class="filter name">Naam document</a>
+							<a href="javascript:void(0)" class="filter client">Client</a>
+							<a href="javascript:void(0)" class="filter type">Documentype</a>
+							<a href="javascript:void(0)" class="filter instance">Instantie</a>
+							<a href="javascript:void(0)" class="filter name">Laatst aan gewerkt</a>
+						</div>
+					</div>
+					<ul class="list">
+						{{#each document}}
+						<li>
+							<a href="" class="document">
+								<span class="person">{{persons}}</span>
+								<span class="doctype">{{types}}</span>
+								<span class="company">{{instances}}</span>
+								<span class="date">{{date}}</span>
+								<span class="name">{{name}}</span>
+							</a>
+						</li>
+						{{/each}}
+					</ul>
+				</div>
+			</div>

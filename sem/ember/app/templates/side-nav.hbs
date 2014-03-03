@@ -1,0 +1,17 @@
+
+<div class="state-nav">
+	<a href="javascript:void(0)" class="new button">new</a>
+{{#if isEditing}}
+	<a href="javascript:void(0)" class="toggle-editable button editing" {{action 'readDocument'}}>read</a>
+{{else}}
+	<a href="javascript:void(0)" class="toggle-editable button" {{action 'editDocument'}}>edit</a>
+{{/if}}
+	<a href="javascript:void(0)" class="to-top button">edit</a>
+	<a href="javascript:void(0)" class="save button">edit</a>
+	<a href="javascript:void(0)" class="save inactive button">edit</a>
+	<a href="javascript:void(0)" class="delete button">edit</a>
+	<a href="javascript:void(0)" class="back-to-list button">list</a>
+	<a href="javascript:void(0)" class="back-to-menu button">menu</a>
+	<a href="javascript:void(0)" class="back-to-person button">menu</a>
+	<a href="javascript:void(0)" class="back-to-instance button">menu</a>
+</div>

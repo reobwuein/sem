@@ -1,0 +1,897 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"border",
+				"border-box"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"la",
+				"labelAmount"
+			],
+			[
+				"con",
+				"contacts"
+			],
+			[
+				"th",
+				"thead	Tag"
+			],
+			[
+				"m",
+				"maxMiliSecondsBack"
+			],
+			[
+				"inlin",
+				"inline"
+			],
+			[
+				"z-",
+				"z-index"
+			],
+			[
+				"te",
+				"text-indent"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"retu",
+				"returnData"
+			],
+			[
+				"clien",
+				"clientId"
+			],
+			[
+				"ent",
+				"entity_id"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"background",
+				"background"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"re",
+				"removeTemp"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"a",
+				"assemble"
+			],
+			[
+				"_l",
+				"_languages"
+			],
+			[
+				"get",
+				"getimes"
+			],
+			[
+				"se",
+				"seperator"
+			],
+			[
+				"time",
+				"timeInMins"
+			],
+			[
+				"p",
+				"paceInMin-KM"
+			],
+			[
+				"curr",
+				"current_user_can"
+			],
+			[
+				"use",
+				"user_meta"
+			],
+			[
+				"is",
+				"is_int"
+			],
+			[
+				"Docum",
+				"Document"
+			],
+			[
+				"postm",
+				"PostMetaBoxVO"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"border-left",
+				"border-left-width"
+			],
+			[
+				"border-",
+				"border-radius"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"ls",
+				"list-style"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"is_n",
+				"is_numeric"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"inline",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/styles/less.scss",
+			"settings":
+			{
+				"buffer_size": 14715,
+				"line_ending": "Unix",
+				"name": "* {"
+			}
+		},
+		{
+			"file": "app/styles/style.scss",
+			"settings":
+			{
+				"buffer_size": 4848,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/templates/documents.hbs",
+			"settings":
+			{
+				"buffer_size": 1354,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Grunt",
+	"command_palette":
+	{
+		"height": 87.0,
+		"selected_items":
+		[
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"rub",
+				"Set Syntax: Ruby"
+			],
+			[
+				"ru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"js",
+				"Set Syntax: JSON"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"ist",
+				"Package Control: Install Package"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"scal",
+				"Set Syntax: Scala"
+			],
+			[
+				"syn ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pref",
+				"Preferences: Prefixr Key Bindings – Default"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"sid",
+				"View: Toggle Side Bar"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"wor",
+				"Word Wrap: Toggle"
+			],
+			[
+				"syn le",
+				"Set Syntax: LESS"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"min",
+				"View: Toggle Minimap"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"syn ba",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"syn re",
+				"Set Syntax: Regular Expression"
+			],
+			[
+				"setting",
+				"Preferences: Settings - User"
+			],
+			[
+				"syn mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"up",
+				"SFTP: Upload File"
+			],
+			[
+				"upl",
+				"SFTP: Upload File"
+			],
+			[
+				"u",
+				"SFTP: Upload File"
+			],
+			[
+				"UP",
+				"SFTP: Upload File"
+			],
+			[
+				"uplo",
+				"SFTP: Upload File"
+			],
+			[
+				"sfu",
+				"SFTP: Upload File"
+			],
+			[
+				"jac",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set jac",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sftp u",
+				"SFTP: Upload File"
+			],
+			[
+				"sft",
+				"SFTP: Switch Remote Mapping…"
+			],
+			[
+				"st",
+				"SFTP: Upload File"
+			],
+			[
+				"sftp ",
+				"SFTP: Upload File"
+			],
+			[
+				"sftp",
+				"SFTP: Upload File"
+			],
+			[
+				"prefix",
+				"Preferences: Prefixr Key Bindings – Default"
+			],
+			[
+				"stf",
+				"SFTP: Upload File"
+			],
+			[
+				"sftu",
+				"SFTP: Upload File"
+			],
+			[
+				"sft up",
+				"SFTP: Upload File"
+			],
+			[
+				"sftp up",
+				"SFTP: Upload File"
+			],
+			[
+				"wo",
+				"WordPress Codex: Search from Input"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"togg",
+				"View: Toggle Status Bar"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 186.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Robin/projects/sem/ember/Gruntfile.js",
+		"/Users/Robin/projects/sem/ember/app/styles/style.scss",
+		"/Users/Robin/projects/sem/ember/app/index.html",
+		"/Users/Robin/projects/sem/ember/app/scripts/router.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/routes/document_route.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/controllers/document_controller.js",
+		"/Users/Robin/projects/sem/ember/app/templates/document.hbs",
+		"/Users/Robin/projects/sem/ember/app/templates/side-nav.hbs",
+		"/Users/Robin/projects/sem/ember/app/templates/form/form_element.hbs",
+		"/Users/Robin/projects/wappzapp/resizer.js",
+		"/Users/Robin/projects/sem/ember/app/templates/documents.hbs",
+		"/Users/Robin/Downloads/linkedin_connections_export_microsoft_outlook.csv",
+		"/Users/Robin/projects/Reobwuein/contacts.html",
+		"/Users/Robin/projects/sem/ember/app/scripts/routes/documents_route.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/controllers/form-elements.js",
+		"/Users/Robin/projects/sem/ember/app/templates/form/text_input.hbs",
+		"/Users/Robin/projects/sem/ember/app/templates/form-elements/text_input.hbs",
+		"/Users/Robin/projects/sem/ember/.tmp/styles/less.css",
+		"/Users/Robin/projects/sem/backend/oauth.js",
+		"/Users/Robin/projects/sem/ember/app/templates/layouts/menu.hbs",
+		"/Users/Robin/projects/sem/ember/app/templates/index.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/paperpage.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/prettypage.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/menu.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/header.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/form-elements.js",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/footer.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/client.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/form-1.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/index.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/instance.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/list-clients.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/list-companies.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/list-documents.hbs",
+		"/Users/Robin/projects/sem/ember/app/templates/application.hbs",
+		"/Users/Robin/projects/sem/ember/app/scripts/models/user.js",
+		"/Users/Robin/projects/sem/ember/app/styles/style.css",
+		"/Users/Robin/projects/sem/ember/app/styles/old.scss",
+		"/Users/Robin/projects/sem/ember/app/scripts/resizer.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/app.js",
+		"/Users/Robin/projects/sem/ember/app/templates/instances.hbs",
+		"/Users/Robin/projects/sem/ember/app/templates/clients.hbs",
+		"/Users/Robin/projects/sem/ember/app/scripts/routes/instance_route.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/routes/application_route.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/routes/client_route.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/routes/clients_route.js",
+		"/Users/Robin/projects/sem/ember/app/bower_components/font-awesome/scss/_path.scss",
+		"/Users/Robin/projects/sem/ember/bower.json",
+		"/Users/Robin/projects/sem/backend/package.json",
+		"/Users/Robin/projects/sem/backend/server.js",
+		"/Users/Robin/projects/sem/backend/model.js",
+		"/Users/Robin/projects/sem/backend/encode.js",
+		"/Users/Robin/projects/sem/backend/mysql.js",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/less/page/background.less",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/less/page/text-box.less",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/less/page/main-nav.less",
+		"/Users/Robin/projects/Sem/gruntfile.js",
+		"/Users/Robin/projects/Sem/dev/templates/src/templates/pages/form-1.hbs",
+		"/Users/Robin/projects/Sem/dev/templates/src/templates/layouts/form-elements.js",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/page/form-elements/input-textarea.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/mixins/colors.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/styles.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/page/form-elements/input-text.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/javascript/core/resizer.js",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/page/paper.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/page/background.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/typography/typo.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/templates/pages/client.hbs",
+		"/Users/Robin/projects/Sem/dev/templates/bin/form-1.html",
+		"/Users/Robin/projects/Hulp/dev/src/templates/pages/list-documents.hbs",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/Robin/projects/Hulp/dev/src/less/mixins/images.less",
+		"/Users/Robin/projects/Hulp/dev/src/less/page/background.less",
+		"/Users/Robin/projects/Hulp/dev/src/templates/pages/list-clients.hbs",
+		"/Users/Robin/projects/Hulp/dev/src/templates/pages/list-companies.hbs",
+		"/Users/Robin/projects/Hulp/dev/src/less/page/breadcrumbs.less",
+		"/Users/Robin/projects/Hulp/dev/src/less/page/main-nav.less",
+		"/Users/Robin/projects/Hulp/gruntfile.js",
+		"/Users/Robin/projects/Hulp/dev/src/less/styles.less",
+		"/Users/Robin/projects/Hulp/dev/src/data/data.json",
+		"/Users/Robin/projects/Hulp/dev/src/templates/layouts/header.hbs",
+		"/Users/Robin/projects/Hulp/dev/src/templates/layouts/footer.hbs",
+		"/Users/Robin/projects/Hulp/dev/src/templates/pages/index.hbt",
+		"/Users/Robin/projects/Hulp/dev/src/less/typography/typo.less",
+		"/Users/Robin/projects/Hulp/dev/src/less/page/list.less",
+		"/Users/Robin/projects/Hulp/dev/src/less/mixins/colors.less",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/Prefixr/Default (OSX).sublime-keymap",
+		"/Users/Robin/projects/Hulp/hulp.sublime-project",
+		"/Users/Robin/projects/Hulp/dev/src/templates/pages/instance.hbs",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/list-clients.hbs",
+		"/Users/Robin/projects/Hulp/dev/bin/dev/src/templates/site/index.html",
+		"/Users/Robin/projects/Hulp/dev/bin/a/c/styles.css",
+		"/Users/Robin/projects/Hulp/docs/planning",
+		"/Users/Robin/projects/Hulp/dev/src/less/styles.css",
+		"/Users/Robin/projects/Hulp/dev/src/less/styles.min.css",
+		"/Users/Robin/projects/Hulp/dev/src/images/noise-generation.txt",
+		"/Users/Robin/projects/Hulp/dev/src/javascript/core/resizer.js",
+		"/Users/Robin/projects/Hulp/dev/src/html/index.html",
+		"/Users/Robin/projects/Hulp/package.json",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/index.hbt",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/list-clients.hbt",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/list-companies.hbt",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/list-documents.hbt",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/list-items.hbs",
+		"/Users/Robin/projects/Hulp/planning",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/Less2Css/less2css.sublime-settings",
+		"/Users/Robin/projects/Hulp/index.html",
+		"/Users/Robin/projects/Hulp/list-clients.html",
+		"/Users/Robin/projects/Hulp/list-companies.html",
+		"/Users/Robin/projects/Hulp/list-documents.html",
+		"/Users/Robin/projects/Hulp/a/c/styles.css",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/LESS/LESS.sublime-settings",
+		"/Users/Robin/projects/morder/selectorsheetgenerator.html",
+		"/Users/Robin/projects/morder/selector/morder-box-25.less",
+		"/Users/Robin/projects/morder/selector/morder-box-30.less",
+		"/Users/Robin/projects/morder/selector/morder-box-1000.less",
+		"/Users/Robin/projects/morder/selector/morder-box-500.less",
+		"/Users/Robin/projects/morder/selector/morder-box-200.less",
+		"/Users/Robin/projects/morder/selector/morder-box-100.less",
+		"/Users/Robin/projects/morder/selector/morder-box-50",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Robin/projects/Tamminga MP/staging/wp-config.php",
+		"/Users/Robin/projects/damloop/checkpointTimes.js",
+		"/Users/Robin/projects/damloop/app.js",
+		"/Users/Robin/projects/damloop/damloop.html",
+		"/Users/Robin/projects/damloop/cache.manifest",
+		"/Users/Robin/projects/damloop/zepto.min.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"*.js",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"FontA",
+			"\n",
+			"	",
+			"\n\"",
+			"\",\"",
+			"		",
+			"border: solid .3em",
+			"#container",
+			"focus",
+			"act",
+			"#",
+			"black",
+			"<%= yeoman.app %>/",
+			"whi",
+			"dist",
+			"Font",
+			"../i/",
+			"font-f",
+			"personData",
+			"console.error",
+			"error",
+			"person",
+			"IN",
+			"\"",
+			":.*",
+			"@\\* .* ?\\*@",
+			"/@/* .*?/*/@",
+			"@/* .*?/*@",
+			":",
+			"black",
+			"static",
+			"inputText",
+			"'requested-facility'",
+			"dev/bin/",
+			"dev/src/",
+			"ine",
+			"line",
+			".main-nav",
+			"build",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"$",
+			"parseint",
+			"parseine",
+			"[",
+			"val",
+			".val(",
+			"current_user_can",
+			"admin-",
+			"add_editor_Style",
+			"black",
+			"padding",
+			"133",
+			"134",
+			"135",
+			"\"content\" => $content",
+			"content",
+			"\"content\" => $content",
+			"error",
+			"\">4",
+			"\">2",
+			"\">3",
+			"5</span>",
+			"td",
+			"PostMetaBoxVO",
+			"share",
+			"your_custom_post_type",
+			"your_custom_taxonomy",
+			"foo_skill",
+			"foo_portfolio",
+			" .",
+			"ƒ",
+			"border",
+			"opacity:1;",
+			"	}",
+			"opacity:1;\n",
+			"op",
+			"/>\";",
+			"sort_document",
+			"byte",
+			"tags"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"../",
+			"images/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/styles/less.scss",
+					"settings":
+					{
+						"buffer_size": 14715,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2122,
+								2122
+							]
+						],
+						"settings":
+						{
+							"auto_name": "* {",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 10483.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/styles/style.scss",
+					"settings":
+					{
+						"buffer_size": 4848,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SCSS/SCSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 30.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/templates/documents.hbs",
+					"settings":
+					{
+						"buffer_size": 1354,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1282,
+								1282
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.sftp":
+	{
+		"height": 84.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"grun",
+				"root/gruntfile.js"
+			],
+			[
+				"sft",
+				"sftp-config.json"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"ru",
+				"customPostTypes/customPostMetaBoxes/RuleOverview.php"
+			],
+			[
+				"vo",
+				"ReobwueinWP/postMetaBox/customPostMetaBoxes/TwitterPostMetaBoxVO.php"
+			],
+			[
+				"funct",
+				"functions.php"
+			],
+			[
+				"up",
+				"ReobwueinWP/postRestrictor/postMetaBoxes/UserRolePostMetaBoxVO.php"
+			],
+			[
+				"",
+				"Railwayrules/functions.php"
+			],
+			[
+				"inde",
+				"Railwayrules/index.php"
+			],
+			[
+				"sea",
+				"Railwayrules/search.php"
+			],
+			[
+				"style",
+				"Railwayrules/a/c/style.css"
+			],
+			[
+				"sty",
+				"Railwayrules/style.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/Robin/projects/sem/backend/sem.api.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 276.0,
+	"status_bar_visible": false
+}

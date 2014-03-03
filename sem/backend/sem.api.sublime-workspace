@@ -1,0 +1,1119 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"retu",
+				"returnData"
+			],
+			[
+				"clien",
+				"clientId"
+			],
+			[
+				"ent",
+				"entity_id"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"background",
+				"background"
+			],
+			[
+				"tex",
+				"text-indent"
+			],
+			[
+				"table",
+				"table-cell"
+			],
+			[
+				"re",
+				"removeTemp"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"a",
+				"assemble"
+			],
+			[
+				"_l",
+				"_languages"
+			],
+			[
+				"get",
+				"getimes"
+			],
+			[
+				"se",
+				"seperator"
+			],
+			[
+				"time",
+				"timeInMins"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"p",
+				"paceInMin-KM"
+			],
+			[
+				"curr",
+				"current_user_can"
+			],
+			[
+				"use",
+				"user_meta"
+			],
+			[
+				"is",
+				"is_int"
+			],
+			[
+				"Docum",
+				"Document"
+			],
+			[
+				"postm",
+				"PostMetaBoxVO"
+			],
+			[
+				"border-r",
+				"border-right"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"border-left",
+				"border-left-width"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"border-",
+				"border-radius"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"ls",
+				"list-style"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"is_n",
+				"is_numeric"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"inline",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "/*\n    Small node.js example of a server.js main file using the express framework with oauth2 validation and a custom api script.\n*/\n\nvar express = require('express'),\n    oauthserver = require('node-oauth2-server');\n    api = require(\"./api\");\n\nvar app = express();\n\napp.configure(function() {\n    var oauth = oauthserver({\n        model: require('./oauth'), \n        grants: ['password'],\n        debug: true,\n        allow:{ get: \"/\" },\n\n    });\n    app.use(express.bodyParser()); // REQUIRED\n    app.use(oauth.handler());\n    app.use(oauth.errorHandler());\n});\n\n\napp.get('/', function (req, res) {\n    res.send('Sem REST API documentation will follow');\n});\n\napp.get('/rest/entities', function(req, res){\n    api.getAllEntity(req.user.id, res);\n});\n\napp.get('/rest/entities/:id', function(req, res){\n    api.getEntity(req.user.id, req.params.id, res);\n});\n\napp.post('/rest/entities/:id', function(req, res){\n    api.updateClient(req.user.id, req.params.id, req.body, res);\n});\n\napp.get('/test', function(req, res){\n    res.send(api.test(req.user.id));\n});\n\napp.get('/rest/forms', function(req, res){\n    api.getForms(req.user.id, req.params.id, res);\n});\n\napp.get('/rest/forms/:id', function(req, res){\n    api.getFormValues(req.user.id, req.params.id, res);\n});\n\napp.get('/rest/form-formats', function(req, res){\n    api.getFormValues(req.user.id, req.params.id, res);\n});\n\napp.listen(3000);\nconsole.log(\"listening 3000\")",
+			"file": "/Users/Robin/projects/wappzapp/server.js",
+			"file_size": 1426,
+			"file_write_time": 1389856502000000,
+			"settings":
+			{
+				"buffer_size": 1426,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Robin/projects/wappzapp/js-demo/timer.js",
+			"settings":
+			{
+				"buffer_size": 6990,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/Users/Robin/projects/wappzapp/js-demo/resizer.js",
+			"settings":
+			{
+				"buffer_size": 826,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Robin/projects/wappzapp/js-demo/server.js",
+			"settings":
+			{
+				"buffer_size": 1426,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/Robin/Desktop/factuur",
+			"settings":
+			{
+				"buffer_size": 1313,
+				"line_ending": "Unix",
+				"name": "<h1>Factuur</h1>"
+			}
+		},
+		{
+			"contents": "`entity_id`, `nice_name`, `first_name`, `last_name`, `prefix`, `initials`, `birthdate`, `bsn`, `salutation_full`, `salutation_abbreviation`, ",
+			"settings":
+			{
+				"buffer_size": 141,
+				"line_ending": "Unix",
+				"name": "`entity_id`, `nice_name`, `first_name`, `last_name"
+			}
+		},
+		{
+			"contents": "CREATE VIEW `entity_person` AS\n\nSELECT \n`entity_id`, `entity_type_name`, `nice_name`, `first_name`, `last_name`, `prefix`, `initials`, `birthdate`, `bsn`, \n`salutation_full`, `salutation_abbreviation`\n\nFROM `entity`\n\nINNER JOIN entity_type\nON entity.entity_type=entity_type.id\n\nINNER JOIN entity_to_person \nON entity.entity_id=entity_to_person.entity\n\nINNER JOIN person \nON entity_to_person.person=person.id\n\nINNER JOIN salutation \nON person.salutation=salutation.id;\n\n\n\n\nCREATE VIEW `entity_address` AS\n\nSELECT \n`entity_id`, `address_id`, `street`, `number`, `number_addition`, `zipp`, `town`, `country`, `extra` \n\nFROM `entity`\n\nINNER JOIN entity_to_address \nON entity.entity_id=entity_to_address.entity\n\nINNER JOIN address \nON entity_to_address.address=address.address_id;\n\n\n\n\nCREATE VIEW `entity_contact` AS\n\nSELECT \n`entity`, `contact_id`, `contact_type_name`, `value`\n\nFROM `entity_contact_value`\n\nINNER JOIN entity_contact_type\nON entity_contact_value.entity=entity_contact_type.id;\n\n\n\n\nCREATE VIEW `entity_company` AS\n\nSELECT \n`entity_id`, `entity_type_name`, `company_name`, `kvk`, `btw`\n\nFROM `entity`\n\nINNER JOIN entity_type\nON entity.entity_type=entity_type.id\n\nINNER JOIN entity_to_company \nON entity.entity_id=entity_to_company.entity\n\nINNER JOIN company \nON entity_to_company.company=company.id;\n\n\n\n\nCREATE VIEW `user_access_form` AS \n\nSELECT \n`access_user`,`form`,`entity` \n\nFROM `entity_to_form` \n\nINNER JOIN `user_access_entity`\nON entity_to_form.entity=user_access_entity.entity;\n\n\n\nCREATE VIEW `form_value` AS \n\nSELECT `form_large` as `form`, `form_field_large` as `form_field`, `value_large` as `value`\nFROM `form_value_large` \n\nLEFT JOIN `form_value_small`\nON form_value_large.id = form_value_small.id\n\nUNION\n\nSELECT `form_small` as `form`, `form_field_small` as `form_field`, `value_small` as `value`\nFROM `form_value_large` \nRIGHT JOIN `form_value_small`\nON form_value_large.id = form_value_small.id\n\nUNION\n\nSELECT `form_tiny` as `form`, `form_field_tiny` as `form_field`, CAST(`value_tiny` AS CHAR(50))\nFROM `form_value_large` \nRIGHT JOIN `form_value_tiny`\nON form_value_large.id = form_value_tiny.id;\n\n\n",
+			"file": "views.sql",
+			"file_size": 2297,
+			"file_write_time": 1387360194000000,
+			"settings":
+			{
+				"buffer_size": 2129,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "SELECT `form_large` as `form`, `form_field_large` as `form_field`, `value_large` as `value`\nFROM `form_value_large` \n\nLEFT JOIN `form_value_small`\nON form_value_large.id = form_value_small.id\n\nUNION\n\nSELECT `form_small` as `form`, `form_field_small` as `form_field`, `value_small` as `value`\nFROM `form_value_large` \nRIGHT JOIN `form_value_small`\nON form_value_large.id = form_value_small.id\n\nUNION\n\nSELECT `form_tiny` as `form`, `form_field_tiny` as `form_field`, CAST(`value_tiny` AS CHAR(50))\nFROM `form_value_large` \nRIGHT JOIN `form_value_tiny`\nON form_value_large.id = form_value_tiny.id",
+			"settings":
+			{
+				"buffer_size": 593,
+				"line_ending": "Unix",
+				"name": "SELECT `form_large` as `form`, `form_field_large`"
+			}
+		},
+		{
+			"contents": "{ _readableState: \n   { highWaterMark: 16384,\n     buffer: [ <Buffer 7b 22 74 65 73 74 22 3a 22 64 61 74 61 22 7d> ],\n     length: 15,\n     pipes: null,\n     pipesCount: 0,\n     flowing: false,\n     ended: true,\n     endEmitted: false,\n     reading: false,\n     calledRead: false,\n     sync: true,\n     needReadable: false,\n     emittedReadable: true,\n     readableListening: false,\n     objectMode: false,\n     defaultEncoding: 'utf8',\n     ranOut: false,\n     awaitDrain: 0,\n     readingMore: false,\n     decoder: null,\n     encoding: null },\n  readable: true,\n  domain: null,\n  _events: {},\n  _maxListeners: 10,\n  socket: \n   { _connecting: false,\n     _handle: \n      { fd: 17,\n        writeQueueSize: 0,\n        owner: [Circular],\n        onread: [Function: onread],\n        reading: true },\n     _readableState: \n      { highWaterMark: 16384,\n        buffer: [],\n        length: 0,\n        pipes: null,\n        pipesCount: 0,\n        flowing: false,\n        ended: false,\n        endEmitted: false,\n        reading: true,\n        calledRead: true,\n        sync: false,\n        needReadable: true,\n        emittedReadable: false,\n        readableListening: false,\n        objectMode: false,\n        defaultEncoding: 'utf8',\n        ranOut: false,\n        awaitDrain: 0,\n        readingMore: false,\n        decoder: null,\n        encoding: null },\n     readable: true,\n     domain: null,\n     _events: \n      { end: [Object],\n        finish: [Function: onSocketFinish],\n        _socketEnd: [Function: onSocketEnd],\n        drain: [Object],\n        timeout: [Function],\n        error: [Function],\n        close: [Object] },\n     _maxListeners: 10,\n     _writableState: \n      { highWaterMark: 16384,\n        objectMode: false,\n        needDrain: false,\n        ending: false,\n        ended: false,\n        finished: false,\n        decodeStrings: false,\n        defaultEncoding: 'utf8',\n        length: 0,\n        writing: false,\n        sync: true,\n        bufferProcessing: false,\n        onwrite: [Function],\n        writecb: null,\n        writelen: 0,\n        buffer: [] },\n     writable: true,\n     allowHalfOpen: true,\n     onend: [Function],\n     destroyed: false,\n     errorEmitted: false,\n     bytesRead: 487,\n     _bytesDispatched: 0,\n     _pendingData: null,\n     _pendingEncoding: '',\n     server: \n      { domain: null,\n        _events: [Object],\n        _maxListeners: 10,\n        _connections: 1,\n        connections: [Getter/Setter],\n        _handle: [Object],\n        _usingSlaves: false,\n        _slaves: [],\n        allowHalfOpen: true,\n        httpAllowHalfOpen: false,\n        timeout: 120000,\n        _connectionKey: '4:0.0.0.0:3000' },\n     _idleTimeout: 120000,\n     _idleNext: { _idleNext: [Circular], _idlePrev: [Circular] },\n     _idlePrev: { _idleNext: [Circular], _idlePrev: [Circular] },\n     _idleStart: 1386412934253,\n     parser: \n      { _headers: [],\n        _url: '',\n        onHeaders: [Function: parserOnHeaders],\n        onHeadersComplete: [Function: parserOnHeadersComplete],\n        onBody: [Function: parserOnBody],\n        onMessageComplete: [Function: parserOnMessageComplete],\n        socket: [Circular],\n        incoming: [Circular],\n        maxHeaderPairs: 2000,\n        onIncoming: [Function] },\n     ondata: [Function],\n     _paused: false,\n     _httpMessage: \n      { domain: null,\n        _events: [Object],\n        _maxListeners: 10,\n        output: [],\n        outputEncodings: [],\n        writable: true,\n        _last: false,\n        chunkedEncoding: false,\n        shouldKeepAlive: true,\n        useChunkedEncodingByDefault: true,\n        sendDate: true,\n        _headerSent: false,\n        _header: '',\n        _hasBody: true,\n        _trailer: '',\n        finished: false,\n        _hangupClose: false,\n        socket: [Circular],\n        connection: [Circular],\n        _headers: [Object],\n        _headerNames: [Object],\n        req: [Circular],\n        locals: [Function: locals] } },\n  connection: \n   { _connecting: false,\n     _handle: \n      { fd: 17,\n        writeQueueSize: 0,\n        owner: [Circular],\n        onread: [Function: onread],\n        reading: true },\n     _readableState: \n      { highWaterMark: 16384,\n        buffer: [],\n        length: 0,\n        pipes: null,\n        pipesCount: 0,\n        flowing: false,\n        ended: false,\n        endEmitted: false,\n        reading: true,\n        calledRead: true,\n        sync: false,\n        needReadable: true,\n        emittedReadable: false,\n        readableListening: false,\n        objectMode: false,\n        defaultEncoding: 'utf8',\n        ranOut: false,\n        awaitDrain: 0,\n        readingMore: false,\n        decoder: null,\n        encoding: null },\n     readable: true,\n     domain: null,\n     _events: \n      { end: [Object],\n        finish: [Function: onSocketFinish],\n        _socketEnd: [Function: onSocketEnd],\n        drain: [Object],\n        timeout: [Function],\n        error: [Function],\n        close: [Object] },\n     _maxListeners: 10,\n     _writableState: \n      { highWaterMark: 16384,\n        objectMode: false,\n        needDrain: false,\n        ending: false,\n        ended: false,\n        finished: false,\n        decodeStrings: false,\n        defaultEncoding: 'utf8',\n        length: 0,\n        writing: false,\n        sync: true,\n        bufferProcessing: false,\n        onwrite: [Function],\n        writecb: null,\n        writelen: 0,\n        buffer: [] },\n     writable: true,\n     allowHalfOpen: true,\n     onend: [Function],\n     destroyed: false,\n     errorEmitted: false,\n     bytesRead: 487,\n     _bytesDispatched: 0,\n     _pendingData: null,\n     _pendingEncoding: '',\n     server: \n      { domain: null,\n        _events: [Object],\n        _maxListeners: 10,\n        _connections: 1,\n        connections: [Getter/Setter],\n        _handle: [Object],\n        _usingSlaves: false,\n        _slaves: [],\n        allowHalfOpen: true,\n        httpAllowHalfOpen: false,\n        timeout: 120000,\n        _connectionKey: '4:0.0.0.0:3000' },\n     _idleTimeout: 120000,\n     _idleNext: { _idleNext: [Circular], _idlePrev: [Circular] },\n     _idlePrev: { _idleNext: [Circular], _idlePrev: [Circular] },\n     _idleStart: 1386412934253,\n     parser: \n      { _headers: [],\n        _url: '',\n        onHeaders: [Function: parserOnHeaders],\n        onHeadersComplete: [Function: parserOnHeadersComplete],\n        onBody: [Function: parserOnBody],\n        onMessageComplete: [Function: parserOnMessageComplete],\n        socket: [Circular],\n        incoming: [Circular],\n        maxHeaderPairs: 2000,\n        onIncoming: [Function] },\n     ondata: [Function],\n     _paused: false,\n     _httpMessage: \n      { domain: null,\n        _events: [Object],\n        _maxListeners: 10,\n        output: [],\n        outputEncodings: [],\n        writable: true,\n        _last: false,\n        chunkedEncoding: false,\n        shouldKeepAlive: true,\n        useChunkedEncodingByDefault: true,\n        sendDate: true,\n        _headerSent: false,\n        _header: '',\n        _hasBody: true,\n        _trailer: '',\n        finished: false,\n        _hangupClose: false,\n        socket: [Circular],\n        connection: [Circular],\n        _headers: [Object],\n        _headerNames: [Object],\n        req: [Circular],\n        locals: [Function: locals] } },\n  httpVersion: '1.1',\n  complete: true,\n  headers: \n   { host: '192.168.0.107:3000',\n     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:25.0) Gecko/20100101 Firefox/25.0',\n     accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',\n     'accept-language': 'en-US,en;q=0.5',\n     'accept-encoding': 'gzip, deflate',\n     'content-type': 'text/xml; charset=UTF-8',\n     'content-length': '15',\n     connection: 'keep-alive',\n     pragma: 'no-cache',\n     'cache-control': 'no-cache' },\n  trailers: {},\n  _pendings: [],\n  _pendingIndex: 0,\n  url: '/rest/clients/2?access_token=caef7b034841c8df65176323dc0f8879f04a9645',\n  method: 'POST',\n  statusCode: null,\n  client: \n   { _connecting: false,\n     _handle: \n      { fd: 17,\n        writeQueueSize: 0,\n        owner: [Circular],\n        onread: [Function: onread],\n        reading: true },\n     _readableState: \n      { highWaterMark: 16384,\n        buffer: [],\n        length: 0,\n        pipes: null,\n        pipesCount: 0,\n        flowing: false,\n        ended: false,\n        endEmitted: false,\n        reading: true,\n        calledRead: true,\n        sync: false,\n        needReadable: true,\n        emittedReadable: false,\n        readableListening: false,\n        objectMode: false,\n        defaultEncoding: 'utf8',\n        ranOut: false,\n        awaitDrain: 0,\n        readingMore: false,\n        decoder: null,\n        encoding: null },\n     readable: true,\n     domain: null,\n     _events: \n      { end: [Object],\n        finish: [Function: onSocketFinish],\n        _socketEnd: [Function: onSocketEnd],\n        drain: [Object],\n        timeout: [Function],\n        error: [Function],\n        close: [Object] },\n     _maxListeners: 10,\n     _writableState: \n      { highWaterMark: 16384,\n        objectMode: false,\n        needDrain: false,\n        ending: false,\n        ended: false,\n        finished: false,\n        decodeStrings: false,\n        defaultEncoding: 'utf8',\n        length: 0,\n        writing: false,\n        sync: true,\n        bufferProcessing: false,\n        onwrite: [Function],\n        writecb: null,\n        writelen: 0,\n        buffer: [] },\n     writable: true,\n     allowHalfOpen: true,\n     onend: [Function],\n     destroyed: false,\n     errorEmitted: false,\n     bytesRead: 487,\n     _bytesDispatched: 0,\n     _pendingData: null,\n     _pendingEncoding: '',\n     server: \n      { domain: null,\n        _events: [Object],\n        _maxListeners: 10,\n        _connections: 1,\n        connections: [Getter/Setter],\n        _handle: [Object],\n        _usingSlaves: false,\n        _slaves: [],\n        allowHalfOpen: true,\n        httpAllowHalfOpen: false,\n        timeout: 120000,\n        _connectionKey: '4:0.0.0.0:3000' },\n     _idleTimeout: 120000,\n     _idleNext: { _idleNext: [Circular], _idlePrev: [Circular] },\n     _idlePrev: { _idleNext: [Circular], _idlePrev: [Circular] },\n     _idleStart: 1386412934253,\n     parser: \n      { _headers: [],\n        _url: '',\n        onHeaders: [Function: parserOnHeaders],\n        onHeadersComplete: [Function: parserOnHeadersComplete],\n        onBody: [Function: parserOnBody],\n        onMessageComplete: [Function: parserOnMessageComplete],\n        socket: [Circular],\n        incoming: [Circular],\n        maxHeaderPairs: 2000,\n        onIncoming: [Function] },\n     ondata: [Function],\n     _paused: false,\n     _httpMessage: \n      { domain: null,\n        _events: [Object],\n        _maxListeners: 10,\n        output: [],\n        outputEncodings: [],\n        writable: true,\n        _last: false,\n        chunkedEncoding: false,\n        shouldKeepAlive: true,\n        useChunkedEncodingByDefault: true,\n        sendDate: true,\n        _headerSent: false,\n        _header: '',\n        _hasBody: true,\n        _trailer: '',\n        finished: false,\n        _hangupClose: false,\n        socket: [Circular],\n        connection: [Circular],\n        _headers: [Object],\n        _headerNames: [Object],\n        req: [Circular],\n        locals: [Function: locals] } },\n  _consuming: false,\n  _dumped: false,\n  httpVersionMajor: 1,\n  httpVersionMinor: 1,\n  upgrade: false,\n  originalUrl: '/rest/clients/2?access_token=caef7b034841c8df65176323dc0f8879f04a9645',\n  _parsedUrl: \n   { protocol: null,\n     slashes: null,\n     auth: null,\n     host: null,\n     port: null,\n     hostname: null,\n     hash: null,\n     search: '?access_token=caef7b034841c8df65176323dc0f8879f04a9645',\n     query: 'access_token=caef7b034841c8df65176323dc0f8879f04a9645',\n     pathname: '/rest/clients/2',\n     path: '/rest/clients/2?access_token=caef7b034841c8df65176323dc0f8879f04a9645',\n     href: '/rest/clients/2?access_token=caef7b034841c8df65176323dc0f8879f04a9645' },\n  query: { access_token: 'caef7b034841c8df65176323dc0f8879f04a9645' },\n  res: \n   { domain: null,\n     _events: { finish: [Function] },\n     _maxListeners: 10,\n     output: [],\n     outputEncodings: [],\n     writable: true,\n     _last: false,\n     chunkedEncoding: false,\n     shouldKeepAlive: true,\n     useChunkedEncodingByDefault: true,\n     sendDate: true,\n     _headerSent: false,\n     _header: '',\n     _hasBody: true,\n     _trailer: '',\n     finished: false,\n     _hangupClose: false,\n     socket: \n      { _connecting: false,\n        _handle: [Object],\n        _readableState: [Object],\n        readable: true,\n        domain: null,\n        _events: [Object],\n        _maxListeners: 10,\n        _writableState: [Object],\n        writable: true,\n        allowHalfOpen: true,\n        onend: [Function],\n        destroyed: false,\n        errorEmitted: false,\n        bytesRead: 487,\n        _bytesDispatched: 0,\n        _pendingData: null,\n        _pendingEncoding: '',\n        server: [Object],\n        _idleTimeout: 120000,\n        _idleNext: [Object],\n        _idlePrev: [Object],\n        _idleStart: 1386412934253,\n        parser: [Object],\n        ondata: [Function],\n        _paused: false,\n        _httpMessage: [Circular] },\n     connection: \n      { _connecting: false,\n        _handle: [Object],\n        _readableState: [Object],\n        readable: true,\n        domain: null,\n        _events: [Object],\n        _maxListeners: 10,\n        _writableState: [Object],\n        writable: true,\n        allowHalfOpen: true,\n        onend: [Function],\n        destroyed: false,\n        errorEmitted: false,\n        bytesRead: 487,\n        _bytesDispatched: 0,\n        _pendingData: null,\n        _pendingEncoding: '',\n        server: [Object],\n        _idleTimeout: 120000,\n        _idleNext: [Object],\n        _idlePrev: [Object],\n        _idleStart: 1386412934253,\n        parser: [Object],\n        ondata: [Function],\n        _paused: false,\n        _httpMessage: [Circular] },\n     _headers: { 'x-powered-by': 'Express' },\n     _headerNames: { 'x-powered-by': 'X-Powered-By' },\n     req: [Circular],\n     locals: [Function: locals] },\n  next: [Function: next],\n  body: {},\n  files: {},\n  oauth: \n   { internal: false,\n     token: \n      { access_token: 'caef7b034841c8df65176323dc0f8879f04a9645',\n        client_id: 'hiep',\n        expires: Sat Dec 07 2013 11:59:34 GMT+0100 (CET),\n        user_id: 1 } },\n  user: { id: 1 },\n  _route_index: 0,\n  route: \n   { path: '/rest/clients/:id',\n     method: 'post',\n     callbacks: [ [Function] ],\n     keys: [ [Object] ],\n     regexp: /^\\/rest\\/clients\\/(?:([^\\/]+?))\\/?$/i,\n     params: [ id: '2' ] },\n  params: [ id: '2' ] }\n\n",
+			"settings":
+			{
+				"buffer_size": 14668,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 600,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Grunt",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"sql",
+				"Set Syntax: SQL"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"js",
+				"Set Syntax: JSON"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"ist",
+				"Package Control: Install Package"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"scal",
+				"Set Syntax: Scala"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"syn ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"pref",
+				"Preferences: Prefixr Key Bindings – Default"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"sid",
+				"View: Toggle Side Bar"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"wor",
+				"Word Wrap: Toggle"
+			],
+			[
+				"syn le",
+				"Set Syntax: LESS"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"min",
+				"View: Toggle Minimap"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"syn ba",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"syn re",
+				"Set Syntax: Regular Expression"
+			],
+			[
+				"setting",
+				"Preferences: Settings - User"
+			],
+			[
+				"syn mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"up",
+				"SFTP: Upload File"
+			],
+			[
+				"upl",
+				"SFTP: Upload File"
+			],
+			[
+				"u",
+				"SFTP: Upload File"
+			],
+			[
+				"UP",
+				"SFTP: Upload File"
+			],
+			[
+				"uplo",
+				"SFTP: Upload File"
+			],
+			[
+				"sfu",
+				"SFTP: Upload File"
+			],
+			[
+				"jac",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"set jac",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sftp u",
+				"SFTP: Upload File"
+			],
+			[
+				"sft",
+				"SFTP: Switch Remote Mapping…"
+			],
+			[
+				"st",
+				"SFTP: Upload File"
+			],
+			[
+				"sftp ",
+				"SFTP: Upload File"
+			],
+			[
+				"sftp",
+				"SFTP: Upload File"
+			],
+			[
+				"prefix",
+				"Preferences: Prefixr Key Bindings – Default"
+			],
+			[
+				"stf",
+				"SFTP: Upload File"
+			],
+			[
+				"sftu",
+				"SFTP: Upload File"
+			],
+			[
+				"sft up",
+				"SFTP: Upload File"
+			],
+			[
+				"sftp up",
+				"SFTP: Upload File"
+			],
+			[
+				"wo",
+				"WordPress Codex: Search from Input"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"togg",
+				"View: Toggle Status Bar"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 54.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Robin/.ssh/id_rsa.pub",
+		"/Users/Robin/projects/sem/backend/api.js",
+		"/Users/Robin/projects/eric.php",
+		"/Users/Robin/projects/sem/backend/oauth.js",
+		"/Users/Robin/projects/sem/ember/app/templates/layouts/menu.hbs",
+		"/Users/Robin/projects/sem/ember/app/templates/index.hbs",
+		"/Users/Robin/projects/sem/ember/app/scripts/router.js",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/paperpage.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/prettypage.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/menu.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/header.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/form-elements.js",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/layouts/footer.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/client.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/form-1.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/index.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/instance.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/list-clients.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/list-companies.hbs",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/templates/pages/list-documents.hbs",
+		"/Users/Robin/projects/sem/ember/app/templates/application.hbs",
+		"/Users/Robin/projects/sem/ember/app/scripts/models/user.js",
+		"/Users/Robin/projects/sem/ember/app/styles/style.css",
+		"/Users/Robin/projects/sem/ember/app/styles/old.scss",
+		"/Users/Robin/projects/sem/ember/app/index.html",
+		"/Users/Robin/projects/sem/ember/app/scripts/resizer.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/app.js",
+		"/Users/Robin/projects/sem/ember/app/templates/documents.hbs",
+		"/Users/Robin/projects/sem/ember/app/templates/instances.hbs",
+		"/Users/Robin/projects/sem/ember/app/templates/clients.hbs",
+		"/Users/Robin/projects/sem/ember/app/scripts/routes/instance_route.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/routes/application_route.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/routes/client_route.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/routes/document_route.js",
+		"/Users/Robin/projects/sem/ember/app/scripts/routes/clients_route.js",
+		"/Users/Robin/projects/sem/ember/Gruntfile.js",
+		"/Users/Robin/projects/sem/ember/app/styles/style.scss",
+		"/Users/Robin/projects/sem/ember/app/bower_components/font-awesome/scss/_path.scss",
+		"/Users/Robin/projects/sem/ember/bower.json",
+		"/Users/Robin/projects/sem/backend/package.json",
+		"/Users/Robin/projects/sem/backend/server.js",
+		"/Users/Robin/projects/sem/backend/model.js",
+		"/Users/Robin/projects/sem/backend/encode.js",
+		"/Users/Robin/projects/sem/backend/mysql.js",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/less/page/background.less",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/less/page/text-box.less",
+		"/Users/Robin/projects/sem/Sem.v0/dev/templates/src/less/page/main-nav.less",
+		"/Users/Robin/projects/Sem/gruntfile.js",
+		"/Users/Robin/projects/Sem/dev/templates/src/templates/pages/form-1.hbs",
+		"/Users/Robin/projects/Sem/dev/templates/src/templates/layouts/form-elements.js",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/page/form-elements/input-textarea.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/mixins/colors.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/styles.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/page/form-elements/input-text.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/javascript/core/resizer.js",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/page/paper.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/page/background.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/less/typography/typo.less",
+		"/Users/Robin/projects/Sem/dev/templates/src/templates/pages/client.hbs",
+		"/Users/Robin/projects/Sem/dev/templates/bin/form-1.html",
+		"/Users/Robin/projects/Hulp/dev/src/templates/pages/list-documents.hbs",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/Robin/projects/Hulp/dev/src/less/mixins/images.less",
+		"/Users/Robin/projects/Hulp/dev/src/less/page/background.less",
+		"/Users/Robin/projects/Hulp/dev/src/templates/pages/list-clients.hbs",
+		"/Users/Robin/projects/Hulp/dev/src/templates/pages/list-companies.hbs",
+		"/Users/Robin/projects/Hulp/dev/src/less/page/breadcrumbs.less",
+		"/Users/Robin/projects/Hulp/dev/src/less/page/main-nav.less",
+		"/Users/Robin/projects/Hulp/gruntfile.js",
+		"/Users/Robin/projects/Hulp/dev/src/less/styles.less",
+		"/Users/Robin/projects/Hulp/dev/src/data/data.json",
+		"/Users/Robin/projects/Hulp/dev/src/templates/layouts/header.hbs",
+		"/Users/Robin/projects/Hulp/dev/src/templates/layouts/footer.hbs",
+		"/Users/Robin/projects/Hulp/dev/src/templates/pages/index.hbt",
+		"/Users/Robin/projects/Hulp/dev/src/less/typography/typo.less",
+		"/Users/Robin/projects/Hulp/dev/src/less/page/list.less",
+		"/Users/Robin/projects/Hulp/dev/src/less/mixins/colors.less",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/Prefixr/Default (OSX).sublime-keymap",
+		"/Users/Robin/projects/Hulp/hulp.sublime-project",
+		"/Users/Robin/projects/Hulp/dev/src/templates/pages/instance.hbs",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/list-clients.hbs",
+		"/Users/Robin/projects/Hulp/dev/bin/dev/src/templates/site/index.html",
+		"/Users/Robin/projects/Hulp/dev/bin/a/c/styles.css",
+		"/Users/Robin/projects/Hulp/docs/planning",
+		"/Users/Robin/projects/Hulp/dev/src/less/styles.css",
+		"/Users/Robin/projects/Hulp/dev/src/less/styles.min.css",
+		"/Users/Robin/projects/Hulp/dev/src/images/noise-generation.txt",
+		"/Users/Robin/projects/Hulp/dev/src/javascript/core/resizer.js",
+		"/Users/Robin/projects/Hulp/dev/src/html/index.html",
+		"/Users/Robin/projects/Hulp/package.json",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/index.hbt",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/list-clients.hbt",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/list-companies.hbt",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/list-documents.hbt",
+		"/Users/Robin/projects/Hulp/dev/src/templates/site/list-items.hbs",
+		"/Users/Robin/projects/Hulp/planning",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/Less2Css/less2css.sublime-settings",
+		"/Users/Robin/projects/Hulp/index.html",
+		"/Users/Robin/projects/Hulp/list-clients.html",
+		"/Users/Robin/projects/Hulp/list-companies.html",
+		"/Users/Robin/projects/Hulp/list-documents.html",
+		"/Users/Robin/projects/Hulp/a/c/styles.css",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/LESS/LESS.sublime-settings",
+		"/Users/Robin/projects/morder/selectorsheetgenerator.html",
+		"/Users/Robin/projects/morder/selector/morder-box-25.less",
+		"/Users/Robin/projects/morder/selector/morder-box-30.less",
+		"/Users/Robin/projects/morder/selector/morder-box-1000.less",
+		"/Users/Robin/projects/morder/selector/morder-box-500.less",
+		"/Users/Robin/projects/morder/selector/morder-box-200.less",
+		"/Users/Robin/projects/morder/selector/morder-box-100.less",
+		"/Users/Robin/projects/morder/selector/morder-box-50",
+		"/Users/Robin/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Robin/projects/Tamminga MP/staging/wp-config.php",
+		"/Users/Robin/projects/damloop/checkpointTimes.js",
+		"/Users/Robin/projects/damloop/app.js",
+		"/Users/Robin/projects/damloop/damloop.html",
+		"/Users/Robin/projects/damloop/cache.manifest",
+		"/Users/Robin/projects/damloop/zepto.min.js",
+		"/Users/Robin/Desktop/checkpointTimes.js",
+		"/Users/Robin/Desktop/damloop.html",
+		"/Users/Robin/projects/Briqworks/v1/dev/wp-config.php",
+		"/Users/Robin/projects/Briqworks/v1/dev/wp-content/themes/Railwayrules/sftp-config.json",
+		"/Users/Robin/projects/cv/index.html",
+		"/Users/Robin/projects/cv/8ee60a2e00c90d7e00d5069188dc115b",
+		"/Users/Robin/Desktop/test.css",
+		"/Users/Robin/Desktop/new.css",
+		"/Users/Robin/Desktop/newtest.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"*.js",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			" && ",
+			"company",
+			"person",
+			" ,",
+			"&&",
+			"ejcweijers@gmail.com",
+			"get",
+			"SELECt",
+			"personData",
+			"console.error",
+			"error",
+			"person",
+			"IN",
+			"\"",
+			":.*",
+			"@\\* .* ?\\*@",
+			"/@/* .*?/*/@",
+			"@/* .*?/*@",
+			":",
+			"black",
+			"static",
+			"inputText",
+			"'requested-facility'",
+			"dev/bin/",
+			"dev/src/",
+			"ine",
+			"line",
+			".main-nav",
+			"build",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"$",
+			"parseint",
+			"parseine",
+			"[",
+			"val",
+			".val(",
+			"current_user_can",
+			"admin-",
+			"add_editor_Style",
+			"black",
+			"padding",
+			"133",
+			"134",
+			"135",
+			"\"content\" => $content",
+			"content",
+			"\"content\" => $content",
+			"error",
+			"\">4",
+			"\">2",
+			"\">3",
+			"5</span>",
+			"td",
+			"PostMetaBoxVO",
+			"share",
+			"your_custom_post_type",
+			"your_custom_taxonomy",
+			"foo_skill",
+			"foo_portfolio",
+			" .",
+			"ƒ",
+			"border",
+			"opacity:1;",
+			"	}",
+			"opacity:1;\n",
+			"op",
+			"/>\";",
+			"sort_document",
+			"byte",
+			"tags"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"SELECT"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/Robin/projects/wappzapp/server.js",
+					"settings":
+					{
+						"buffer_size": 1426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1290,
+								1290
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/Robin/projects/wappzapp/js-demo/timer.js",
+					"settings":
+					{
+						"buffer_size": 6990,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6990,
+								6990
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 318.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/Robin/projects/wappzapp/js-demo/resizer.js",
+					"settings":
+					{
+						"buffer_size": 826,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/Robin/projects/wappzapp/js-demo/server.js",
+					"settings":
+					{
+						"buffer_size": 1426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								920,
+								920
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 20.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/Robin/Desktop/factuur",
+					"settings":
+					{
+						"buffer_size": 1313,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1147,
+								1147
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<h1>Factuur</h1>",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"settings":
+					{
+						"buffer_size": 141,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								141,
+								141
+							]
+						],
+						"settings":
+						{
+							"auto_name": "`entity_id`, `nice_name`, `first_name`, `last_name",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "views.sql",
+					"settings":
+					{
+						"buffer_size": 2129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								697,
+								697
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/SQL/SQL.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 229.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"settings":
+					{
+						"buffer_size": 593,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								391,
+								391
+							]
+						],
+						"settings":
+						{
+							"auto_name": "SELECT `form_large` as `form`, `form_field_large`",
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"settings":
+					{
+						"buffer_size": 14668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14403,
+								14403
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4139.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "package.json",
+					"settings":
+					{
+						"buffer_size": 600,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								597,
+								597
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 112.0
+	},
+	"output.sftp":
+	{
+		"height": 84.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"grun",
+				"root/gruntfile.js"
+			],
+			[
+				"sft",
+				"sftp-config.json"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"ru",
+				"customPostTypes/customPostMetaBoxes/RuleOverview.php"
+			],
+			[
+				"vo",
+				"ReobwueinWP/postMetaBox/customPostMetaBoxes/TwitterPostMetaBoxVO.php"
+			],
+			[
+				"funct",
+				"functions.php"
+			],
+			[
+				"up",
+				"ReobwueinWP/postRestrictor/postMetaBoxes/UserRolePostMetaBoxVO.php"
+			],
+			[
+				"",
+				"Railwayrules/functions.php"
+			],
+			[
+				"inde",
+				"Railwayrules/index.php"
+			],
+			[
+				"sea",
+				"Railwayrules/search.php"
+			],
+			[
+				"style",
+				"Railwayrules/a/c/style.css"
+			],
+			[
+				"sty",
+				"Railwayrules/style.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/Robin/projects/sem/ember/sem.ember.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 276.0,
+	"status_bar_visible": false
+}
