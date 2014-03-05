@@ -1,29 +1,22 @@
-			
-			<!-- div class="nav documents"><a href="./index.html">Home</a> > Documents</div //-->
 			<div class="content">
 				<div class="state-nav">
-					<a href="javascript:void(0)" class="new button">new</a>
-				
-					<a href="javascript:void(0)" class="to-top button">edit</a>
-					<a href="javascript:void(0)" class="save button">edit</a>
-					<a href="javascript:void(0)" class="save inactive button">edit</a>
-					<a href="javascript:void(0)" class="delete button">edit</a>
-					<a href="javascript:void(0)" class="back-to-list button" {{action 'backToDocuments'}}>list</a>
+					<a href="javascript:void(0)" class="new button" {{action 'newDocument'}}>new</a>
+					<a href="javascript:void(0)" class="to-top button" {{action 'backToTop'}}>edit</a>
+					<a href="javascript:void(0)" class="back-to-list button" {{action 'backToList'}}>back</a>
 					<a href="javascript:void(0)" class="back-to-menu button" {{action 'backToMenu'}}>menu</a>
-					<a href="javascript:void(0)" class="back-to-person button">menu</a>
-					<a href="javascript:void(0)" class="back-to-instance button">menu</a>
 				</div>
-				
+
 				<div {{bind-attr class=":sheet :document isEditing::read"}}>
-					<h1>Title</h1>
-					<div>6 november 2013</div>
-					<form class="list">
-						{{#with isReading as reading}}
-							{{#each field}}
-								{{partial "form/form_element"}}
-							{{/each}}
-						{{/with}}
-					</form>
+					<!--article-->
+						<h1>{{name}}</h1>
+						<div>{{date}}</div>
+						<form class="list">
+							{{#with isReading as reading}}
+								{{#each field}}
+									{{partial "form/form_element"}}
+								{{/each}}
+							{{/with}}
+						</form>
+					<!--/article-->
 				</div>
-				--}}
 			</div>

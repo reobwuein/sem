@@ -1,49 +1,55 @@
 EmberApp.DocumentsRoute = Ember.Route.extend({
-	
+
+	searchFilter : '',
+
+	// setupController : function(controller, model) {
+	//     // setupController is a good location to setup your controller
+	//     controller.set("model",model);
+	// },
+
     model: function () {
-    	var creationDate;
-        this.document = [];
-        for(var i = 0, l = 20; i<l; i++){
+    	console.log('document model called. ');
+    	var searchFilter = this.searchFilter;
 
-        	// random data
-        	creationDate = randomDate();
-			this.document.push({
-				"id" : i + 1000,
-				"name" : "test document " + i,
-				"persons" : (Math.random() > .33 && "Kees Vonk" || Math.random() > .33 && "Klasien van Diepen" || "Bep de Denker"),
-				"types" : "test document",
-				"instances" : ["Sem"],
-				"date" : creationDate.getHours() + ":" + creationDate.getMinutes() + " " + creationDate.getDate() + "/" + creationDate.getMonth() + "/" + creationDate.getFullYear()
-			})  
-
-			// test = this.document;      	
-        }
-
-		function randomDate(maxMiliSecondsBack){
-			maxMiliSecondsBack = maxMiliSecondsBack || 31536000000; // one year default;
-			return new Date( new Date().getTime() - maxMiliSecondsBack + Math.random() * maxMiliSecondsBack)
-		}
-
-        return this;
-    },
+		var filterFunc = function(item) {
+  			console.log("searchFilter=" + searchFilter);
+  			if(searchFilter.trim().length > 0) {
+  				if(item.get('name').toLowerCase().search(searchFilter) != -1) {
+  					return item;
+  				}
+  			}
+  			else {
+  				console.log("empty search");
+  				return item;
+  			}
+  		};
+  		var records =this.store.all('document');
+  		records.set('filterFunction',filterFunc);
+		return records;
+    }.observes('searchFilter'),
 
 	actions : {
         backToMenu : function() {
             this.transitionTo('/');
         },
 
+        filterDocuments : function(newFilter) {
+        	console.log("new filter = " + newFilter);
+        	this.set('searchFilter',newFilter);
+        },
+
+		backToTop : function() {
+        	$("html, body").animate({scrollTop: 0}, 1000);
+        },
+
         //Use documentObject instead of document to avoid aliasing with the DOM!
         goToDocument : function(documentObject) {
-        	console.log("Going to document");
-        	console.log(documentObject.id);
-        	// test = documentObject;
         	this.transitionTo('documents/' + documentObject.id,documentObject);
         },
 
         newDocument : function() {
-        	console.log("new document transitionTo");
         	this.transitionTo('documents/new');
-        }
+        },
     }
 
 });

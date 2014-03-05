@@ -1,15 +1,14 @@
-			
-			<!-- div class="nav documents"><a href="./index.html">Home</a> > Documents</div //-->
+
 			<div class="content">
 				<div class="state-nav">
 					<a href="javascript:void(0)" class="new button" {{action 'newDocument'}}>new</a>
-					<a href="javascript:void(0)" class="to-top button">edit</a>
+					<a href="javascript:void(0)" class="to-top button" {{action 'backToTop'}}>edit</a>
 					<a href="javascript:void(0)" class="back-to-menu button" {{action 'backToMenu'}}>menu</a>
 				</div>
 				<div class="sheet document">
 					<h1>Documenten</h1>
 					<div class="filters">
-						<div class="search"><input type="text" value="" placeholder="Zoek" name="search" /></div>
+						<div class="search">{{view Ember.TextField valueBinding="searchFilter" type="text" action="filterDocuments" name="search"}}</div>
 						<div class="order">
 							<a href="javascript:void(0)" class="filter name">Naam document</a>
 							<a href="javascript:void(0)" class="filter client">Client</a>
@@ -19,8 +18,8 @@
 						</div>
 					</div>
 					<ul class="list">
-						{{#each document}}
-							{{#link-to "document" document}}
+						{{#each}}
+							{{#link-to 'document' id}}
 								<li>
 									<span class="person">{{persons}}</span>
 									<span class="doctype">{{types}}</span>
@@ -28,7 +27,7 @@
 									<span class="date">{{date}}</span>
 									<span class="name">{{name}}</span>
 								</li>
-							{{/link-to}}
+							{{/link-to}}	
 						{{/each}}
 					</ul>
 				</div>

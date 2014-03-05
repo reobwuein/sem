@@ -3,16 +3,12 @@ EmberApp.User = DS.Model.extend({
 	pass: DS.attr('string'),
 	token : DS.attr('string'),
 	isLoggedIn : DS.attr('boolean'),
-
-	toString : function() {
-		return "user " + name + " with pass = " + pass + " and token = " + token + ".";
-	}
 });
 
-EmberApp.User.FIXTURES = [{
-	id : 1,	
-	name: "super user",
-	pass: "epic laser dragon",
-	token : "token",
-	isLoggedIn : true
-}]
+// EmberApp.User.FIXTURES = [{
+// 	id : 1,	
+// 	name: "super user",
+// 	pass: "epic laser dragon",
+// 	token : "token",
+// 	isLoggedIn : true
+// }]
