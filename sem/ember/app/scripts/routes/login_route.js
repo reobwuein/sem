@@ -1,30 +1,17 @@
 EmberApp.LoginRoute = Ember.Route.extend({
-	
-	model : function() {
-		// var user = this.store.all('user',1);
-		// console.log(user.get('name'));
-		// // console.log(user.get('name'));
-  //       return user;
+	setupController : function(controller, model) {
+		controller.set('model', model);
+	},
 
-  		var store = this.get('store');
-	    store.push("user",
-	      {
-	         id: 1,
-	         name : "Gerard",
-	         pass : "pass",
-	         token : "token"
-	      }
-	 	);
-	    return store.find("user",1);
+	model : function() {
+		var model = this.store.find('user',2);
+		console.log("user " + model.get('name') + " found");	
+		return model;	
     },
 
-	actions : {
-		logIn : function() {
-			console.log("Login Called")
-		},
-
-		logOut : function() {
-
-		}
-	}
+    actions : {
+        backToMenu : function() {
+            this.transitionTo('/');
+        }
+    }
 });

@@ -1,13 +1,11 @@
 			
 			<!-- div class="nav documents"><a href="./index.html">Home</a> > Documents</div //-->
 			<div class="content">
-
 				<div class="state-nav">
-					<a href="javascript:void(0)" class="new button">new</a>
+					<a href="javascript:void(0)" class="new button" {{action 'newDocument'}}>new</a>
 					<a href="javascript:void(0)" class="to-top button">edit</a>
-					<a href="javascript:void(0)" class="back-to-menu button">menu</a>
+					<a href="javascript:void(0)" class="back-to-menu button" {{action 'backToMenu'}}>menu</a>
 				</div>
-
 				<div class="sheet document">
 					<h1>Documenten</h1>
 					<div class="filters">
@@ -22,15 +20,15 @@
 					</div>
 					<ul class="list">
 						{{#each document}}
-						<li>
-							<a href="" class="document">
-								<span class="person">{{persons}}</span>
-								<span class="doctype">{{types}}</span>
-								<span class="company">{{instances}}</span>
-								<span class="date">{{date}}</span>
-								<span class="name">{{name}}</span>
-							</a>
-						</li>
+							{{#link-to "document" document}}
+								<li>
+									<span class="person">{{persons}}</span>
+									<span class="doctype">{{types}}</span>
+									<span class="company">{{instances}}</span>
+									<span class="date">{{date}}</span>
+									<span class="name">{{name}}</span>
+								</li>
+							{{/link-to}}
 						{{/each}}
 					</ul>
 				</div>

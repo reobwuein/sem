@@ -1,0 +1,18 @@
+			<div class="content">
+				<div class="state-nav">
+					<a href="javascript:void(0)" class="back-to-menu button" {{action 'backToMenu'}}>menu</a>
+				</div>
+				<div class="document sheet">
+					<h1>Login</h1>
+					{{#if isLoggedIn}}
+						<span>U bent ingelogd als <stong>{{name}}</stong>. Wilt u uitloggen?</span>
+						<button {{action 'logOut'}}>Logout</button>
+					{{else}}
+						<form id="login_form">
+							{{view Ember.TextField valueBinding="name" type="text"}}
+							{{view Ember.TextField valueBinding="pass" type="password"}}
+							<button {{action 'logIn'}}>Login</button>
+						</form>
+					{{/if}}
+				</div>
+			</div>

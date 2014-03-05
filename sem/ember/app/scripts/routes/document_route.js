@@ -1,13 +1,18 @@
 
 EmberApp.DocumentRoute = Ember.Route.extend({
 
-
 	setupController: function(controller, thisDocument) {
+        console.log("Document route controller setup");
 		controller.set('model', thisDocument);
 		controller.set('field', thisDocument.fields);
 	},
 
-    model: function () {
+    model: function (params) {
+        if(params) {
+            console.log("Document route received ");
+            console.log(params);
+        }
+        console.log("Document route model method called.");
         this.fields = [
         	{
         		"setTextInput":true,
@@ -35,9 +40,19 @@ EmberApp.DocumentRoute = Ember.Route.extend({
         ];
 
         this.name = "form";
-        return this;
-    }
 
+        return this;
+    },
+
+    actions : {
+        backToMenu : function() {
+            this.transitionTo('/');
+        },  
+
+        backToDocuments : function() {
+            this.transitionTo('documents');
+        }
+    }
 });
 
 

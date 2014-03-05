@@ -1,4 +1,3 @@
-
 EmberApp.DocumentController = Ember.ObjectController.extend({
 
     isEditing : false,
@@ -13,7 +12,5 @@ EmberApp.DocumentController = Ember.ObjectController.extend({
     		this.set('isEditing', false);
     		this.set('isReading', true);
     	}
-    }
-
-	
-})
+    }	
+});

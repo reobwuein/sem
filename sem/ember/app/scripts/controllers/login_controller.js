@@ -1,12 +1,29 @@
 
-EmberApp.DocumentController = Ember.ObjectController.extend({
+EmberApp.LoginController = Ember.ObjectController.extend({
 
-    actions : {
+    actions : 
+    {
     	logOut : function() {
-            console.log("Logout called.");
+            var model = this.get('model');
+
+            model.set('name','');
+            model.set('pass','');
+            model.set('isLoggedIn',false);
+
+            //Save model after use
+            model.save();
         },
+
     	logIn : function(){
-            console.log("Login called.");	
+    		var model = this.get('model');
+
+    		model.set('isLoggedIn',true);
+			model.save();
+			// this.transitionToRoute('/');
+    	},
+
+    	goBack : function() {
+    		window.history.go(-1);
     	}
     }   	
-})
+});
