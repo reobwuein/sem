@@ -8,14 +8,14 @@
 				{{else}}
 					<a href="javascript:void(0)" class="toggle-editable button" {{action 'editDocument'}}>edit</a>
 				{{/if}}
-					<a href="javascript:void(0)" class="to-top button">edit</a>
 					<a href="javascript:void(0)" class="save button">edit</a>
 					<a href="javascript:void(0)" class="save inactive button">edit</a>
-					<a href="javascript:void(0)" class="delete button">edit</a>
-					<a href="javascript:void(0)" class="back-to-list button">list</a>
-					<a href="javascript:void(0)" class="back-to-menu button">menu</a>
-					<a href="javascript:void(0)" class="back-to-person button">menu</a>
-					<a href="javascript:void(0)" class="back-to-instance button">menu</a>
+					<a href="javascript:void(0)" class="delete button" {{action 'delete'}}>edit</a>
+					<a href="javascript:void(0)" class="to-top button" {{action 'backToTop'}}>edit</a>
+					<a href="javascript:void(0)" class="back-to-menu button" {{action 'backToMenu'}}>menu</a>
+					<a href="javascript:void(0)" class="back-to-list button" {{action 'backToList'}}>back</a>
+					<!-- <a href="javascript:void(0)" class="back-to-person button">menu</a>
+					<a href="javascript:void(0)" class="back-to-instance button">menu</a> -->
 				</div>
 
 				<div {{bind-attr class=":sheet :document isEditing::read"}}>

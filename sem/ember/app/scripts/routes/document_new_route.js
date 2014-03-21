@@ -2,17 +2,13 @@
 EmberApp.DocumentNewRoute = Ember.Route.extend({
 
 	setupController: function(controller, thisDocument) {
-        console.log("Document route controller setup");
+        console.log("Document new route controller setup");
         // test = controller;
 		controller.set('model', thisDocument);
 		controller.set('field', thisDocument.fields);
 	},
 
     model: function (params) {
-        if(params) {
-            console.log("Document route received ");
-            console.log(params);
-        }
         console.log("Document route model method called.");
         this.fields = [
         	{
@@ -20,14 +16,14 @@ EmberApp.DocumentNewRoute = Ember.Route.extend({
         		"setLabel":true,
         		"uniqueName":"form12-field1",
         		"name":"veld 1",
-        		"fieldValue":"hoi"
+        		"fieldValue":""
         	},
         	{
         		"setTextArea":true,
         		"setLabel":true,
         		"uniqueName":"form12-field2",
         		"name":"veld 2",
-        		"fieldValue":"hoi 2"
+        		"fieldValue":""
         	}, 
         	{
         		"setHeader3":true,
@@ -41,21 +37,30 @@ EmberApp.DocumentNewRoute = Ember.Route.extend({
         ];
 
         this.name = "form";
-
         return this;
     },
 
     actions : {
         backToMenu : function() {
             this.transitionTo('/');
-        },  
+        },
 
-        backToDocuments : function() {
+        backToTop : function() {
+            $("html, body").animate({ scrollTop : 0}, 1000);
+        },
+
+        backToList : function() {
+            console.log("back to list called from new document")
             this.transitionTo('documents');
         },
 
-        search : function() {
-            test = this.get('model')
+        delete : function() {
+            console.log("Delete called.");
+            
+            if (confirm("Press a button")) {
+                console.log("OK pressed");
+                this.transitionTo('documents');
+            }
         }
     }
 });

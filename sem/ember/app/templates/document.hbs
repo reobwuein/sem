@@ -2,14 +2,19 @@
 				<div class="state-nav">
 					<a href="javascript:void(0)" class="new button" {{action 'newDocument'}}>new</a>
 					<a href="javascript:void(0)" class="to-top button" {{action 'backToTop'}}>edit</a>
+					{{#if isEditing}}
+					<a href="javascript:void(0)" class="toggle-editable button editing" {{action 'readDocument'}}>read</a>
+					{{else}}
+					<a href="javascript:void(0)" class="toggle-editable button" {{action 'editDocument'}}>edit</a>
+					{{/if}}
 					<a href="javascript:void(0)" class="back-to-list button" {{action 'backToList'}}>back</a>
 					<a href="javascript:void(0)" class="back-to-menu button" {{action 'backToMenu'}}>menu</a>
 				</div>
 
 				<div {{bind-attr class=":sheet :document isEditing::read"}}>
 					<!--article-->
-						<h1>{{name}}</h1>
-						<div>{{date}}</div>
+						<h1>Title</h1>
+						<div>6 november 2013</div>
 						<form class="list">
 							{{#with isReading as reading}}
 								{{#each field}}

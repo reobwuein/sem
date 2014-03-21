@@ -1,7 +1,7 @@
 
 			<div class="content">
 				<div class="state-nav">
-					<a href="javascript:void(0)" class="new button" {{action 'newDocument'}}>new</a>
+					{{#link-to 'document_new' class="new button"}}new{{/link-to}}
 					<a href="javascript:void(0)" class="to-top button" {{action 'backToTop'}}>edit</a>
 					<a href="javascript:void(0)" class="back-to-menu button" {{action 'backToMenu'}}>menu</a>
 				</div>
@@ -18,14 +18,14 @@
 						</div>
 					</div>
 					<ul class="list">
-						{{#each}}
+						{{#each item in arrangedContent}}
 							{{#link-to 'document' id}}
 								<li>
-									<span class="person">{{persons}}</span>
-									<span class="doctype">{{types}}</span>
-									<span class="company">{{instances}}</span>
-									<span class="date">{{date}}</span>
-									<span class="name">{{name}}</span>
+									<span class="person">{{item.persons}}</span>
+									<span class="doctype">{{item.types}}</span>
+									<span class="company">{{item.instances}}</span>
+									<span class="date">{{item.date}}</span>
+									<span class="name">{{item.name}}</span>
 								</li>
 							{{/link-to}}	
 						{{/each}}

@@ -1,7 +1,7 @@
 EmberApp.DocumentNewController = Ember.ObjectController.extend({
 
-    isEditing : false,
-    isReading : true,
+    isEditing : true,
+    isReading : false,
 
     actions : {
     	editDocument : function(){
